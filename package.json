@@ -1,0 +1,29 @@
+{
+  "name": "emails-creator",
+  "version": "0.1.0",
+  "description": "tool for emai template creation",
+  "main": "index.js",
+  "scripts": {
+    "test": "hello world"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pashtet86/email-template-creator.git"
+  },
+  "keywords": [
+    "email"
+  ],
+  "author": "bazhenovpavel@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pashtet86/email-template-creator/issues"
+  },
+  "homepage": "https://github.com/pashtet86/email-template-creator#readme",
+  "dependencies": {
+    "browserify": "^13.0.1",
+    "gulp": "^3.9.1",
+    "gulp-inline-css": "^3.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.1"
+  }
+}
