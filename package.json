@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/pashtet86/email-template-creator#readme",
   "dependencies": {
-    "browserify": "^13.0.1",
+    "browser-sync": "^2.12.8",
+    "bs-html-injector": "^3.0.1",
     "gulp": "^3.9.1",
     "gulp-inline-css": "^3.1.0",
     "gulp-rename": "^1.2.2",
