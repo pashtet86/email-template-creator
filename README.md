@@ -6,3 +6,6 @@ After you executed "gulp watch" you need just write your lovely sass styles.
 
 ## browserify
 css & html injections will help you make it faster.
+
+## inline styles
+all sass styles are converted to inline and will added in html with 'style' attribute.
