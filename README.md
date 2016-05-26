@@ -1,4 +1,4 @@
-# gulp buil for email templates
+# gulp build for email templates
 This is a small gulp build for better and simpler email templates creation.
 
 ## sass compiler
