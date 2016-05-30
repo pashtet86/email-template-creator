@@ -9,3 +9,8 @@ css & html injections will help you make it faster.
 
 ## inline styles
 all sass styles are converted to inline and will added in html with 'style' attribute.
+
+##what you need to start ?
+1. clone this repository
+2. npm i
+3. gulp wacth

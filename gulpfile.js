@@ -6,10 +6,10 @@ var gulp            = require('gulp'),
     replace         = require('gulp-replace');
     sendmail        = require('gulp-mailgun');
 
-var remote_imgs_basepath = ''
+var remote_imgs_basepath = '' //use it if for replace local src to remote
 
 gulp.task('inline', function() {
-    return gulp.src('./public/**/*.html')
+    return gulp.src('./public/*.html')
         .pipe(inlineCss({
                 applyStyleTags: true,
                 applyLinkTags: true,
