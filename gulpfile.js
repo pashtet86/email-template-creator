@@ -9,7 +9,7 @@ var gulp            = require('gulp'),
 var remote_imgs_basepath = ''
 
 gulp.task('inline', function() {
-    return gulp.src('./public/*.html')
+    return gulp.src('./public/**/*.html')
         .pipe(inlineCss({
                 applyStyleTags: true,
                 applyLinkTags: true,
@@ -23,24 +23,24 @@ gulp.task('inline', function() {
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass'], function() {
     browserSync.use(htmlInjector, {
-        files: "public/*.html"
+        files: "public/**/*.html"
     });
 
     browserSync.init({
         server: {
-          baseDir: 'public',
+          baseDir: './public/',
           directory: true
         }
     });
 
     gulp.watch("assets/scss/*.scss", ['sass']);
-    gulp.watch(["assets/scss/*.scss","public/*.html"], ['inline']);
+    gulp.watch(["assets/scss/*.scss","public/**/*.html"], ['inline']);
 });
 
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
-    return gulp.src("assets/scss/*.scss")
+    return gulp.src("assets/scss/main.scss")
         .pipe(sass())
         .pipe(gulp.dest("public/css"))
         .pipe(browserSync.stream());
@@ -50,4 +50,3 @@ gulp.task('sass', function() {
 gulp.task("watch", ["serve", "inline"], function () {
     gulp.watch("public/*.html", htmlInjector);
 });
-
