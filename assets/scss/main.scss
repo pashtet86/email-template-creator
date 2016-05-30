@@ -1,3 +1,181 @@
+@import 'reset';
+
+//variables
+$body-bg: #ebebeb;
+$dark-bg: #3d3d3d;
+$container-bg: #fff;
+$gray-text: #777;
+$pink: #ef3f6b;
+$contrast-text: #979797;
+$container-width: 700px;
+$main-font: Arial, Helvetica, sans-serif;
+$gray-border: #eee;
+$label-color: #2f2f2f; 
+
+#bodyTable{
+    height:100% !important;
+    margin:0;
+    padding:0;
+    width:100% !important;
+}
+
+a {
+	color: #959595;
+	text-decoration: none;
+}
+
+.vm {
+	vertical-align: middle;
+} 
+
+html,
 body {
-	margin: 0;
+	background: $body-bg;
+}
+
+#body {
+	background: $body-bg;
+	text-align: center;
+	width: 100%;
+	font-family: $main-font;
+	line-height: 1;
+}
+
+.body-td {
+	padding: 40px;
+}
+
+#container {
+	width: $container-width;
+	background: $container-bg;
+}
+
+#logo {
+	padding-top: 30px;
+}
+
+h1 {
+	font-size: 36px;
+	font-weight: normal;
+	margin-top: 50px;
+}
+
+.subtext {
+	color: $gray-text;
+	font-family: Arial;
+	font-size: 17px;
+	font-weight: 400;
+	margin-top: 10px;
+}
+
+.bordered-table {
+	width: 600px;
+	border: 1px solid $gray-border;
+	margin-top: 55px;
+	margin-bottom: 50px;
+}
+
+.bordered-block {
+	width: 600px;
+	border: 1px solid $gray-border;
+	margin-bottom: 20px;
+}
+
+.text-table-container {
+	padding-top: 45px;
+	padding-left: 45px;
+	padding-right: 45px;
+	padding-bottom: 15px;
+}
+
+.text-table {
+	width: 100%;
+}
+
+.label {
+	color: $label-color;
+	font-weight: bold;
+	width: 32%;
+	text-align: right;
+	font-size: 14px;
+	padding-bottom: 30px; 
+}
+
+.big-label {
+	text-align: right;
+	width: 40%;
+	font-size: 24px;
+	padding-right: 40px;
+	vertical-align: top;
+	padding-top: 45px;
+	line-height: 26px;
+}
+
+.block-text {
+	text-align: left;
+	font-size: 17px;
+	line-height: 24px;
+	padding-top: 45px;
+	padding-bottom: 45px;
+	color: $gray-text;
+
+	a {
+		color: $pink;
+	}
+}
+
+.value {
+	color: $gray-text;
+	font-size: 17px;
+	text-transform: uppercase;
+	text-align: left;
+	padding-left: 30px;
+	padding-bottom: 25px;
+
+	div {
+		border-bottom: 1px solid $gray-border;
+		padding-bottom: 5px;
+	}
+}
+
+#footer {
+	background: $dark-bg;
+	font-size: 12px;
+	padding: 45px;
+	color: $contrast-text;
+	text-align: left;
+	line-height: 18px;
+
+	td:first-child {
+		width: 225px;
+		padding-right: 40px;
+	}
+
+	p {
+		a {
+			color: #fff;
+		}
+	}
+
+	h3 {
+		color: #fff;
+		font-size: 18px;
+		font-weight: normal;
+		margin-bottom: 10px;
+	}
+}
+
+.menu-container {
+	text-align: left;
+	padding-top: 45px;
+
+	a {
+		display: inline-block;
+		margin-right: 25px;	
+		color: $contrast-text;
+
+		&:hover {
+			color: #fff;
+		}
+	}
 }

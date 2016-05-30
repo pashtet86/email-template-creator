@@ -1,21 +1,24 @@
-var gulp        = require('gulp'),
-    inlineCss   = require('gulp-inline-css'),
-    browserSync = require('browser-sync').create(),
-    sass        = require('gulp-sass'),
-    htmlInjector = require("bs-html-injector");
- 
+var gulp            = require('gulp'),
+    inlineCss       = require('gulp-inline-css'),
+    browserSync     = require('browser-sync').create(),
+    sass            = require('gulp-sass'),
+    htmlInjector    = require("bs-html-injector"),
+    replace         = require('gulp-replace');
+    sendmail        = require('gulp-mailgun');
+
+var remote_imgs_basepath = ''
+
 gulp.task('inline', function() {
-    return gulp.src('public/*.html')
+    return gulp.src('./public/*.html')
         .pipe(inlineCss({
                 applyStyleTags: true,
                 applyLinkTags: true,
                 removeStyleTags: true,
                 removeLinkTags: true
         }))
-        .pipe(gulp.dest('inline-code/'));
+        // .pipe(replace(/src="img\//g, 'src="' + remote_imgs_basepath))
+        .pipe(gulp.dest('./mails/'));
 });
-
-
 
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass'], function() {
@@ -31,8 +34,9 @@ gulp.task('serve', ['sass'], function() {
     });
 
     gulp.watch("assets/scss/*.scss", ['sass']);
-    // gulp.watch("public/*.html").on('change', browserSync.reload);
+    gulp.watch(["assets/scss/*.scss","public/*.html"], ['inline']);
 });
+
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
@@ -43,9 +47,7 @@ gulp.task('sass', function() {
 });
 
 
-
-// Default Task
-
-gulp.task("watch", ["serve"], function () {
-    gulp.watch("test/fixtures/*.html", htmlInjector);
+gulp.task("watch", ["serve", "inline"], function () {
+    gulp.watch("public/*.html", htmlInjector);
 });
+

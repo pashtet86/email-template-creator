@@ -1,2 +1,151 @@
+body, h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 0; }
+
+img {
+  border: 0 none;
+  height: auto;
+  line-height: 100%;
+  outline: none;
+  text-decoration: none; }
+
+a img {
+  border: 0 none; }
+
+.imageFix {
+  display: block; }
+
+table, td {
+  border-collapse: collapse; }
+
+#bodyTable {
+  height: 100% !important;
+  margin: 0;
+  padding: 0;
+  width: 100% !important; }
+
+a {
+  color: #959595;
+  text-decoration: none; }
+
+.vm {
+  vertical-align: middle; }
+
+html,
 body {
-  margin: 0; }
+  background: #ebebeb; }
+
+#body {
+  background: #ebebeb;
+  text-align: center;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1; }
+
+.body-td {
+  padding: 40px; }
+
+#container {
+  width: 700px;
+  background: #fff; }
+
+#logo {
+  padding-top: 30px; }
+
+h1 {
+  font-size: 36px;
+  font-weight: normal;
+  margin-top: 50px; }
+
+.subtext {
+  color: #777;
+  font-family: Arial;
+  font-size: 17px;
+  font-weight: 400;
+  margin-top: 10px; }
+
+.bordered-table {
+  width: 600px;
+  border: 1px solid #eee;
+  margin-top: 55px;
+  margin-bottom: 50px; }
+
+.bordered-block {
+  width: 600px;
+  border: 1px solid #eee;
+  margin-bottom: 20px; }
+
+.text-table-container {
+  padding-top: 45px;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-bottom: 15px; }
+
+.text-table {
+  width: 100%; }
+
+.label {
+  color: #2f2f2f;
+  font-weight: bold;
+  width: 32%;
+  text-align: right;
+  font-size: 14px;
+  padding-bottom: 30px; }
+
+.big-label {
+  text-align: right;
+  width: 40%;
+  font-size: 24px;
+  padding-right: 40px;
+  vertical-align: top;
+  padding-top: 45px;
+  line-height: 26px; }
+
+.block-text {
+  text-align: left;
+  font-size: 17px;
+  line-height: 24px;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  color: #777; }
+  .block-text a {
+    color: #ef3f6b; }
+
+.value {
+  color: #777;
+  font-size: 17px;
+  text-transform: uppercase;
+  text-align: left;
+  padding-left: 30px;
+  padding-bottom: 25px; }
+  .value div {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px; }
+
+#footer {
+  background: #3d3d3d;
+  font-size: 12px;
+  padding: 45px;
+  color: #979797;
+  text-align: left;
+  line-height: 18px; }
+  #footer td:first-child {
+    width: 225px;
+    padding-right: 40px; }
+  #footer p a {
+    color: #fff; }
+  #footer h3 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 10px; }
+
+.menu-container {
+  text-align: left;
+  padding-top: 45px; }
+  .menu-container a {
+    display: inline-block;
+    margin-right: 25px;
+    color: #979797; }
+    .menu-container a:hover {
+      color: #fff; }
